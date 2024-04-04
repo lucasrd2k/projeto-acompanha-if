@@ -28,110 +28,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">Gerenciador do app re</div>
-            </a>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="/dashboard">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Informações do app
-            </div>
-            <li class="nav-item">
-                <a class="nav-link" href="/cardapio">
-                    <i class="fas fa-fw fa-utensils"></i> <!-- Ícone de Notificações -->
-                    <span>Cardápio</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/notificacoes">
-                    <i class="fas fa-fw fa-bell"></i> <!-- Ícone de Notificações -->
-                    <span>Notificações</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/publicacoes">
-                    <i class="fas fa-fw fa-newspaper"></i> <!-- Ícone de Publicações -->
-                    <span>Publicações</span>
-                </a>
-            </li>
-
-            <li class="nav-item active">
-                <a class="nav-link" href="/usuarios">
-                    <i class="fas fa-fw fa-user"></i> <!-- Ícone de Usuários -->
-                    <span>Usuários</span>
-                </a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Ferramentas de pesquisa
-            </div>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="/pesquisas">
-                    <i class="fas fa-fw fa-search"></i> <!-- Ícone de Pesquisas -->
-                    <span>Pesquisas</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/graficos">
-                    <i class="fas fa-fw fa-chart-bar"></i> <!-- Ícone de Gráficos -->
-                    <span>Gráficos</span>
-                </a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="/exportar-dados">
-                    <i class="fas fa-fw fa-download"></i> <!-- Ícone de Exportar dados -->
-                    <span>Exportar dados</span>
-                </a>
-            </li>
-
-
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-            <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-                <p class="text-center mb-2">
-                    <strong>O Gerenciador do aplicativo do RE</strong>
-                    é um gerenciador html controlado por javascript
-                    que permite a edição de dados do aplicativo RE.
-                </p>
-            </div>
-
-        </ul>
+        <%- include('componentes/menuAdm') %>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -192,13 +89,13 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800 mb-4">Usuários Cadastrados (Admin/App)</h1>
+                    <h1 class="h3 mb-2 text-gray-800 mb-4">Usuários Cadastrados</h1>
 
                     <div class="card shadow mb-4">
 
                         <div class="card-header py-3 d-flex justify-content-between">
-                            <h4 class="m-0 font-weight-bold text-primary">Usuários do gerenciador</h4>
-                            <a href="create.html" class="btn btn-primary btn-icon-split">
+                            <h4 class="m-0 font-weight-bold text-primary">Administração</h4>
+                            <a href="/newAdm" class="btn btn-primary btn-icon-split">
                                 <span class="icon text-white-50">
                                     <i class="fas fa-plus"></i>
                                 </span>
@@ -232,8 +129,11 @@
                                                 lucasrdias51@gmail.com
                                             </td>
                                             <td>
-                                                <a href="edit.html"><i class="fas fa-edit"></i></a>
-                                                <a href="delete.html"><i class="fas fa-trash-alt"></i></a>
+                                                <center>
+                                                    <a href="edit.html"><i class="fas fa-edit"></i></a>
+                                                    <a class="ml-1" href="delete.html"><i class="fas fa-trash-alt"></i></a>
+                                                    <a class="ml-1" href="verModal.html"><i class="fas fa-eye"></i></a>
+                                                </center>
                                             </td>
                                         </tr>
                                         <tr>
@@ -243,8 +143,11 @@
                                                 priscilla.silva@ifgoiano.edu.br
                                             </td>
                                             <td>
-                                                <a href="edit.html"><i class="fas fa-edit"></i></a>
-                                                <a href="delete.html"><i class="fas fa-trash-alt"></i></a>
+                                                <center>
+                                                    <a href="edit.html"><i class="fas fa-edit"></i></a>
+                                                    <a href="delete.html"><i class="fas fa-trash-alt"></i></a>
+                                                    <a class="ml-1" href="verModal.html"><i class="fas fa-eye"></i></a>
+                                                </center>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -253,10 +156,14 @@
                         </div>
                     </div>
                     <div class="card shadow mb-4">
-
                         <div class="card-header py-3 d-flex justify-content-between">
-                            <h4 class="m-0 font-weight-bold text-primary">Usuários do aplicativo</h4>
-
+                            <h4 class="m-0 font-weight-bold text-primary">Estudantes</h4>
+                            <a href="/newUser" class="btn btn-primary btn-icon-split">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-plus"></i>
+                                </span>
+                                <span class="text">Novo Aluno</span>
+                            </a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -267,6 +174,7 @@
                                             <th>Nome</th>
                                             <th>Matrícula</th>
                                             <th>E-mail</th>
+                                            <th>Ações</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -275,6 +183,7 @@
                                             <th>Nome</th>
                                             <th>Matrícula</th>
                                             <th>E-mail</th>
+                                            <th>Ações</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -285,6 +194,11 @@
                                             <td>
                                                 email123455@gmail.com
                                             </td>
+                                            <td>
+                                                <center>
+                                                    <a class="ml-1" href="verModal.html"><i class="fas fa-eye"></i></a>
+                                                </center>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
@@ -292,6 +206,11 @@
                                             <td>1257514</td>
                                             <td>
                                                 aluno123@gmail.com.br
+                                            </td>
+                                            <td>
+                                                <center>
+                                                    <a class="ml-1" href="verModal.html"><i class="fas fa-eye"></i></a>
+                                                </center>
                                             </td>
                                         </tr>
                                     </tbody>

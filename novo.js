@@ -60,6 +60,30 @@ app.get('/questionarios', (req, res) => {
     res.render('questionarios')
 });
 
+// Atendimentos
+
+app.get('/atendimentos', (req, res) => {
+    res.render('atendimentos')
+});
+
+// Entrevistas
+
+app.get('/entrevistas', (req, res) => {
+    res.render('entrevistas')
+});
+
+// Encaminhamentos
+
+app.get('/encaminhamentos', (req, res) => {
+    res.render('encaminhamentos')
+});
+
+// Setores
+
+app.get('/setores', (req, res) => {
+    res.render('setores')
+});
+
 
 
 app.listen(port, () => {
