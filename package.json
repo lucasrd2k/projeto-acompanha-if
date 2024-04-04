@@ -1,0 +1,43 @@
+{
+  "name": "apis-re",
+  "version": "1.0.0",
+  "description": "Apis do aplicativo do refeitório do IF Goiano",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasrd2k/apis-re.git"
+  },
+  "keywords": [
+    "nodejs",
+    "node",
+    "javascript",
+    "react",
+    "integration",
+    "apis",
+    "api",
+    "express"
+  ],
+  "author": "Lucas Rodrigues Dias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasrd2k/apis-re/issues"
+  },
+  "homepage": "https://github.com/lucasrd2k/apis-re#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^9.0.0",
+    "mariadb": "^3.2.0",
+    "mysql2": "^3.4.0",
+    "nodemailer": "^6.9.3",
+    "sequelize": "^6.32.1"
+  }
+}
