@@ -89,19 +89,18 @@
 
                     <!-- Begin Page Content -->
                     <div class="container-fluid">
-
                         <!-- Page Heading -->
-                        <h1 class="h3 mb-2 text-gray-800 mb-4">Atendimentos</h1>
+                        <h1 class="h3 mb-2 text-gray-800 mb-4">Registros de Atendimentos</h1>
 
                         <div class="card shadow mb-4">
 
                             <div class="card-header py-3 d-flex justify-content-between">
-                                <h4 class="m-0 font-weight-bold text-primary">Atendimentos cadastrados</h4>
-                                <a href="/newSearch" class="btn btn-primary btn-icon-split">
+                                <h4 class="m-0 font-weight-bold text-primary">Atendimentos aos Alunos</h4>
+                                <a href="/registerService" class="btn btn-primary btn-icon-split">
                                     <span class="icon text-white-50">
                                         <i class="fas fa-plus"></i>
                                     </span>
-                                    <span class="text">Cadastrar Atendimento</span>
+                                    <span class="text">Registrar Atendimento</span>
                                 </a>
                             </div>
                             <div class="card-body">
@@ -110,61 +109,59 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Nome</th>
-                                                <th>Amostra</th>
-                                                <th>Descrição</th>
+                                                <th>Nome do Aluno</th>
+                                                <th>Data</th>
+                                                <th>Tipo de Atendimento</th>
+                                                <th>Setor</th>
                                                 <th>Responsável</th>
+                                                <th>Resultado</th>
                                                 <th>Ações</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Nome</th>
-                                                <th>Amostra</th>
-                                                <th>Descrição</th>
+                                                <th>Nome do Aluno</th>
+                                                <th>Data</th>
+                                                <th>Tipo de Atendimento</th>
+                                                <th>Setor</th>
                                                 <th>Responsável</th>
+                                                <th>Resultado</th>
                                                 <th>Ações</th>
                                             </tr>
                                         </tfoot>
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
-                                                <td>Pesquisa de satisfação do App</td>
+                                                <td>Ana Silva</td>
+                                                <td>2024-04-25</td>
+                                                <td>Consulta Médica</td>
+                                                <td>GAE</td>
+                                                <td>Maria Clara Fonseca</td>
+                                                <td>Tratamento prescrito</td>
                                                 <td>
-                                                    300
-                                                </td>
-                                                <td>
-                                                    Pesquisa para avaliar a percepção dos alunos
-                                                    quanto ao aplicativo desenvolvido para o RE do IF Goiano - Campus
-                                                    Ceres
-                                                </td>
-                                                <td>
-                                                    Lucas Rodrigues Dias
-                                                </td>
-                                                <td>
+                                                    <a href="#" class="btn btn-success btn-circle btn-sm">
+                                                        <i class="fas fa-eye"></i>
+                                                    </a>
                                                     <a href="#" class="btn btn-warning btn-circle btn-sm">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
                                                     <a href="#" class="btn btn-danger btn-circle btn-sm">
                                                         <i class="fas fa-trash"></i>
                                                     </a>
-                                                    <!-- Botão de + -->
-                                                    <a href="#" class="btn btn-success btn-circle btn-sm">
-                                                        <i class="fas fa-plus"></i>
                                                 </td>
                                             </tr>
+                                            <!-- Outras linhas conforme necessário -->
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
 
+
+
+
                     </div>
-                    <!-- /.container-fluid -->
-
-
-
                 </div>
                 <!-- End of Main Content -->
                 <%- include('componentes/footer') %>
