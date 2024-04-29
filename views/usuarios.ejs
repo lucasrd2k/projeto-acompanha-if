@@ -29,208 +29,233 @@
 
         <!-- Sidebar -->
         <%- include('componentes/menuAdm') %>
-        <!-- End of Sidebar -->
+            <!-- End of Sidebar -->
 
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
 
-            <!-- Main Content -->
-            <div id="content">
+                <!-- Main Content -->
+                <div id="content">
 
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <!-- Topbar -->
+                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
+                        <!-- Sidebar Toggle (Topbar) -->
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button>
 
-                    <!-- Topbar Search -->
-                    
+                        <!-- Topbar Search -->
 
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Seu nome</span>
-                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Perfil
+
+                        <!-- Topbar Navbar -->
+                        <ul class="navbar-nav ml-auto">
+                            <!-- Nav Item - User Information -->
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Seu nome</span>
+                                    <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Configurações
+                                <!-- Dropdown - User Information -->
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                    aria-labelledby="userDropdown">
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Perfil
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Configurações
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Log de atividade
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Deslogar
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </nav>
+                    <!-- End of Topbar -->
+
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
+
+                        <!-- Page Heading -->
+                        <h1 class="h3 mb-2 text-gray-800 mb-4">Usuários Cadastrados</h1>
+
+                        <div class="card shadow mb-4">
+
+                            <div class="card-header py-3 d-flex justify-content-between">
+                                <h4 class="m-0 font-weight-bold text-primary">Administração</h4>
+                                <!-- Botão para adicionar novo administrador -->
+                                <a href="#" id="newAdminBtn" class="btn btn-warning btn-icon-split">
+                                    <span class="icon text-white-50">
+                                        <i class="fas fa-user-shield"></i>
+                                    </span>
+                                    <span class="text">Novo Administrador</span>
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Log de atividade
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Deslogar
-                                </a>
+
+
                             </div>
-                        </li>
-
-                    </ul>
-
-                </nav>
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800 mb-4">Usuários Cadastrados</h1>
-
-                    <div class="card shadow mb-4">
-
-                        <div class="card-header py-3 d-flex justify-content-between">
-                            <h4 class="m-0 font-weight-bold text-primary">Administração</h4>
-                            <a href="/newAdm" class="btn btn-primary btn-icon-split">
-                                <span class="icon text-white-50">
-                                    <i class="fas fa-plus"></i>
-                                </span>
-                                <span class="text">Novo Administrador</span>
-                            </a>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Nome</th>
-                                            <th>E-mail</th>
-                                            <th>Ações</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Nome</th>
-                                            <th>E-mail</th>
-                                            <th>Ações</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Lucas Rodrigues Dias</td>
-                                            <td>
-                                                lucasrdias51@gmail.com
-                                            </td>
-                                            <td>
-                                                <center>
-                                                    <a href="edit.html"><i class="fas fa-edit"></i></a>
-                                                    <a class="ml-1" href="delete.html"><i class="fas fa-trash-alt"></i></a>
-                                                    <a class="ml-1" href="verModal.html"><i class="fas fa-eye"></i></a>
-                                                </center>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Priscilla Noll</td>
-                                            <td>
-                                                priscilla.silva@ifgoiano.edu.br
-                                            </td>
-                                            <td>
-                                                <center>
-                                                    <a href="edit.html"><i class="fas fa-edit"></i></a>
-                                                    <a href="delete.html"><i class="fas fa-trash-alt"></i></a>
-                                                    <a class="ml-1" href="verModal.html"><i class="fas fa-eye"></i></a>
-                                                </center>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Nome</th>
+                                                <th>Siape</th>
+                                                <th>E-mail</th>
+                                                <th>Setor</th>
+                                                <th>Ações</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Nome</th>
+                                                <th>Siape</th>
+                                                <th>E-mail</th>
+                                                <th>Setor</th>
+                                                <th>Ações</th>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Lucas Rodrigues Dias</td>
+                                                <td>12155656</td>
+                                                <td>
+                                                    lucasrdias51@gmail.com
+                                                </td>
+                                                <td>RE</td>
+                                                <td>
+                                                    <center>
+                                                        <a href="edit.html"><i class="fas fa-edit"></i></a>
+                                                        <a class="ml-1" href="delete.html"><i
+                                                                class="fas fa-trash-alt"></i></a>
+                                                        <a class="ml-1" href="verModal.html"><i
+                                                                class="fas fa-eye"></i></a>
+                                                    </center>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Priscilla Noll</td>
+                                                <td>9019301</td>
+                                                <td>
+                                                    priscilla.silva@ifgoiano.edu.br
+                                                </td>
+                                                <td>RE</td>
+                                                <td>
+                                                    <center>
+                                                        <a href="edit.html"><i class="fas fa-edit"></i></a>
+                                                        <a href="delete.html"><i class="fas fa-trash-alt"></i></a>
+                                                        <a class="ml-1" href="verModal.html"><i
+                                                                class="fas fa-eye"></i></a>
+                                                    </center>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3 d-flex justify-content-between">
+                                <h4 class="m-0 font-weight-bold text-primary">Estudantes</h4>
+
+                                <!-- Botão para adicionar novo usuário comum -->
+                                <a href="#" id="newUserBtn" class="btn btn-success btn-icon-split">
+                                    <span class="icon text-white-50">
+                                        <i class="fas fa-user-plus"></i>
+                                    </span>
+                                    <span class="text">Novo Usuário Comum</span>
+                                </a>
+
+
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Nome</th>
+                                                <th>Matrícula</th>
+                                                <th>E-mail</th>
+                                                <th>Ações</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Nome</th>
+                                                <th>Matrícula</th>
+                                                <th>E-mail</th>
+                                                <th>Ações</th>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Aluno teste</td>
+                                                <td>12345</td>
+                                                <td>
+                                                    email123455@gmail.com
+                                                </td>
+                                                <td>
+                                                    <center>
+                                                        <a class="ml-1" href="verModal.html"><i
+                                                                class="fas fa-eye"></i></a>
+                                                        <a href="edit.html"><i class="fas fa-edit"></i></a>
+                                                    </center>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Aluno Fulano</td>
+                                                <td>1257514</td>
+                                                <td>
+                                                    aluno123@gmail.com.br
+                                                </td>
+                                                <td>
+                                                    <center>
+
+                                                        <a class="ml-1" href="verModal.html"><i
+                                                                class="fas fa-eye"></i></a>
+                                                        <a href="edit.html"><i class="fas fa-edit"></i></a>
+                                                    </center>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3 d-flex justify-content-between">
-                            <h4 class="m-0 font-weight-bold text-primary">Estudantes</h4>
-                            <a href="/newUser" class="btn btn-primary btn-icon-split">
-                                <span class="icon text-white-50">
-                                    <i class="fas fa-plus"></i>
-                                </span>
-                                <span class="text">Novo Aluno</span>
-                            </a>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Nome</th>
-                                            <th>Matrícula</th>
-                                            <th>E-mail</th>
-                                            <th>Ações</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Nome</th>
-                                            <th>Matrícula</th>
-                                            <th>E-mail</th>
-                                            <th>Ações</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Aluno teste</td>
-                                            <td>12345</td>
-                                            <td>
-                                                email123455@gmail.com
-                                            </td>
-                                            <td>
-                                                <center>
-                                                    <a class="ml-1" href="verModal.html"><i class="fas fa-eye"></i></a>
-                                                </center>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Aluno Fulano</td>
-                                            <td>1257514</td>
-                                            <td>
-                                                aluno123@gmail.com.br
-                                            </td>
-                                            <td>
-                                                <center>
-                                                    <a class="ml-1" href="verModal.html"><i class="fas fa-eye"></i></a>
-                                                </center>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- /.container-fluid -->
+
+
 
                 </div>
-                <!-- /.container-fluid -->
+                <!-- End of Main Content -->
+                <%- include('componentes/footer') %>
+                <%- include('componentes/modalUsuario') %>
 
-                
+
 
             </div>
-            <!-- End of Main Content -->
-            <%- include('componentes/footer') %>
-
-
-        </div>
-        <!-- End of Content Wrapper -->
+            <!-- End of Content Wrapper -->
 
     </div>
     <!-- End of Page Wrapper -->
@@ -276,6 +301,28 @@
     <!-- Page level custom scripts -->
     <script src="/js/demo/chart-area-demo.js"></script>
     <script src="/js/demo/chart-pie-demo.js"></script>
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            // Botões que abrem o modal
+            const newUserBtn = document.getElementById('newUserBtn');
+            const newAdminBtn = document.getElementById('newAdminBtn');
+
+            // Campo de setor
+            const sectorField = document.getElementById('sectorField');
+
+            // Eventos para abrir o modal
+            newUserBtn.addEventListener('click', function () {
+                sectorField.style.display = 'none'; // Esconde o setor para usuário comum
+                $('#userModal').modal('show');
+            });
+
+            newAdminBtn.addEventListener('click', function () {
+                sectorField.style.display = 'block'; // Mostra o setor para administrador
+                $('#userModal').modal('show');
+            });
+        });
+    </script>
 
 </body>
 
